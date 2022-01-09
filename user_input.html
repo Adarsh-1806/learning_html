@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <h3>SearchBox</h3>
+        <input type="search" placeholder="search" autofocus/>   <br><br><br>
+        <div>
+        <h3>Personal details</h3>
+        Name   :<input type="text" required pattern="(.*)\s(.*)" placeholder="first-name last-name"/>  <br><br>
+        Email  :<input type="email" required placeholder="email_ID"/>     <br><br>
+        Mobile :<input type="tel" placeholder="phone number"required>   <br><br>      
+        Website:<input type="url" placeholder="url">    <br><br>
+        </div> 
+        <h3 class="h3">cars</h3>
+        <input type="number" min="1" max="10">
+        <br><br>
+       
+        <div>
+            <input id="range" type="range" min="0" max="120" step="5" value="50">
+            <span id="value">50</span>
+        </div>	   
+            
+            
+        <input type="text" list="dir" placeholder="Direction">       
+        <datalist id="dir">
+            <option value="North"></option>
+            <option value="South"></option>
+            <option value="East"></option>
+            <option value="West"></option>
+        </datalist>
+            
+        <h3 >Date</h3>
+                    
+        <input type="month" value="2022-01" />
+                    
+        <input type="week"
+            class="form-control"
+            value="2022-W02" />
+                
+        <input type="datetime-local"  value="" />    <br><br>
+            
+        <button type="reset">Cancel</button>
+        <button type="submit">submit</button>
+    </form>
+    <script>var moveValue = document.getElementById('value');
+				
+        document.getElementById('range').addEventListener('change', function() {
+            moveValue.innerText = this.value;
+        }, false);</script>
+</body>
+</html>

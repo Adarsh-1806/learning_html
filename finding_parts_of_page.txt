@@ -1,0 +1,49 @@
+----------------------------commands Run in browser----------------------------------------
+
+document.getElementByClassName('img-responsive')  		 	//show Nodelist of items with classname="img-responsive"
+
+	document.querySelector('.img-responsive')			//show first match of 'img-responsive' classname
+
+document.querySelectorAll('.img-responsive')				//show all matches of 'img-responsive' classname
+document.querySelectorAll('#example-container li:first-child') 	//show first item of list of id = 'example-container' container
+document.querySelectorAll('#example-container li') 			//all items of list in id = 'example-container' container
+
+items = document.querySelectorAll('#example-container li')  		//store value in items
+items.toString()	
+
+-------------------------------Loops---------------------------------------------------------
+
+var items = document.querySelectorAll('#example-container li')  	 //define items variable to iterate through all list items
+for(var i=0;i<items.length;i++){
+  console.log(items[i].innerText);					//Using For Loop
+}									//console all the innerText of list Items 
+
+
+var forEach = Array.prototype.forEach;				//to access forEach Loop
+var items= document.querySelectorAll('#example-container');
+forEach.call(items,function(items){
+  console.log(items.innerText);
+})
+
+------------------------------Added new item in list----------------------------------------
+
+var list = document.querySelector('#example-container ul') ;
+console.log(list.lenght);						//output = 6  
+var items = document.getElementsByClassName('feature');		//using -> getElementsByClassName
+var newItem = document.createElement('LI');
+newItem.className = 'feature';
+newItem.innerText = 'Added New feature in browser';
+list.appendChild(newItem);
+console.log(list.lenght);						//Output = 7
+
+
+var list = document.querySelector('#example-container ul') ;
+console.log(list.lenght);						//output = 7 
+var items = document.querySelector('feature');			//using -> querySelector
+var newItem = document.createElement('LI');
+newItem.className = 'feature';
+newItem.innerText = 'again Added New feature in browser';
+list.appendChild(newItem);
+console.log(list.lenght);						//Output = 8
+
+
