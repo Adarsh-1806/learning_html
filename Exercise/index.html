@@ -2,220 +2,454 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTA-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Flipcart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- Navigation and Search Section -->
-    <header>
-        <div class="left">
-            <a href="#">
-                <img src="images/logo.png" alt="Flipcart" title="Flipcart">
-            </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+            <span class="nav-item ms-auto d-flex" style="align-items: center;">
+                <a  href=""><img src="images/logo.png" alt="" class="image-fluid" height="100%"></a>
+                <input class="form-control me-2 searchbar " type="search" placeholder="Search" aria-label="Search" >
+            </span>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId" style="text-align: center;"> 
+            <ul class="navbar-nav mx-auto">
+                <li class="navbar-item">
+                    <button type="button" class="btnlogin">Login</button>
+                </li>
+                <li class="navbar-item dropdown">
+                    <div class="dropdown">
+                        <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="font-weight: 500;
+                        color: #fff;">  
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Notification Preferance</a></li>
+                          <li><a class="dropdown-item" href="#">Sell on Flipcart</a></li>
+                          <li><a class="dropdown-item" href="#">24x7 Customer care</a></li>
+                        </ul>
+                      </div>
+                </li>
+                <li class="navbar-item">
+                    <a href="" class="nav-link mx-3 text-light" style="font-size: 14px;;"> <i
+                            class="fa fa-shopping-cart" style="color: white; font-size: 14px;"></i> <b>
+                            Cart</b>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="center">
-            <input type="text" name="search" class="search-Bar" placeholder="Search for products, brands and more"/>
-            <i class="fas fa-search" id="searchicon"></i>
-        </div>
-        <div class="right">
-            <a class="login" href="#">Login</a>
-            <a href="#">More <i class="fas fa-sort-down"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
-        </div>
-    </header>
 
-    <!-- Catagory Section -->
+        </div>
+    </nav>
+
+    <!-- catagory Section -->
     <section class="main-catagory-container">
-        <div class="catagory">
+        <div class="catagory"  style="overflow-x: auto;" >
             <div class="catagory-items">
-                <img src="images/top-offer.webp" alt="Offers" title="Offers">
-                <h4>Top Offers</h4>
+                <img src="images/top-offer.webp" alt="Offers" title="Offers" width="70px" />
+                <h6>Top Offers</h6>
             </div>
             <div class="catagory-items">
-                <img src="images/grocery.webp" alt="Grocery" title="Grocery">
-                <h4>Grocery</h4>
+                <img src="images/grocery.webp" alt="Grocery" title="Grocery" width="70px" />
+                <h6>Grocery</h6>
             </div>
             <div class="catagory-items">
-                <img src="images/mobile.webp" alt="Mobile" title="Mobile">
-                <h4>Mobile</h4>
+                <img src="images/mobile.webp" alt="Mobile" title="Mobile" width="70px" />
+                <h6>Mobile</h6>
             </div>
             <div class="catagory-items">
-                <img src="images/fashion.webp" alt="Fashion" title="Fashion">
-                <h4>Fashion <i class="fas fa-sort-down"></i></h4>
+                <img src="images/fashion.webp" alt="Fashion" title="Fashion" width="70px" />
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Fashion
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="catagory-items">
-                <img src="images/electronics.webp" alt="Electronics" title="Electronics">
-                <h4>Electronics <i class="fas fa-sort-down"></i></h4>
+                <img src="images/electronics.webp" alt="Electronics" title="Electronics" width="70px" />
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Electronics
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="catagory-items">
-                <img src="images/homedecor.webp" alt="Homedecor" title="Homedecor">
-                <h4>Homedecor <i class="fas fa-sort-down"></i></h4>
+                <img src="images/homedecor.webp" alt="Homedecor" title="Homedecor" width="70px" />
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Homedecor
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="catagory-items">
-                <img src="images/application.webp" alt="Application" title="Application">
-                <h4>Application <i class="fas fa-sort-down"></i></h4>
+                <img src="images/application.webp" alt="Application" title="Application" width="70px" />
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Application
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="catagory-items">
-                <img src="images/travel.webp" alt="Travel" title="Travel">
-                <h4>Travel</h4>
+                <img src="images/travel.webp" alt="Travel" title="Travel" width="70px" />
+                <h6>Travel</h6>
             </div>
             <div class="catagory-items">
-                <img src="images/toys.webp" alt="Toys" title="Beauty,Toys & More">
-                <h4>Beauty,Toys & More <i class="fas fa-sort-down"></i></h4>
+                <img src="images/toys.webp" alt="Toys" title="Beauty,Toys & More" width="70px" />
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Beauty,Toys & More
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
+    <!-- <section class="main-part"> -->
+    <section class="deal-section ">
+        <div class="deal-of-day col-lg-12">
+            <div class="head">
+                <div class="left d-flex">
+                    <h2>Deals of The Day</h2>
+                    <i class="fas fa-clock"></i> 14:15:30 left
+                </div>
+                <button type="button" class="btn btn-primary">View All</button>
+            </div>
+            <div class="deal-body">
+                <div class="card-group " id="deals">
+                    <div class="card ">
+                        <div class="itemimg">
+                            <img src="images/watch.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Caslo,Fastrack,Sonata,Titan</h5>
+                            <p class="card-text">Upto 80%off+Extra 10% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Knockout Deals!</small>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="itemimg">
+                            <img src="images/home-temple.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Home Temples & More</h5>
+                            <p class="card-text">Extra 10% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Space Saving Furniture</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/tablet-cases.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Tablet Cases</h5>
+                            <p class="card-text">Extra 10% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">For all Top Models</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/best-home-decor.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Best Home ecor</h5>
+                            <p class="card-text">From &#8377;79</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Lowest Price Ever</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/fashion.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Metronut,Provogue &</h5>
+                            <p class="card-text">From&#8377;249+Extra 10% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Jackets, Dresses & More</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/lava-mobile.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">LAVA A1500</h5>
+                            <p class="card-text">Flat&#8377;830 off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Now &#8377;999</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/lava-mobile.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">LAVA A1500</h5>
+                            <p class="card-text">Flat&#8377;830 off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Now &#8377;999</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/lava-mobile.webp" class="card-img-top" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">LAVA A1500</h5>
+                            <p class="card-text">Flat&#8377;830 off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Now &#8377;999</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- main part -->
-    <section class="container">
-        <section class="common-deals">
+        <div class="deal-of-day">
             <div class="head">
-                <div class="leftpart">
-                   <h2 class="deals"> Deals Of the Day </h2> 
-                <!-- </div> -->
-                <!-- <div class="watch"> -->
-                    <i class="fas fa-clock"></i> 22:07:30 left
+                <div class="left">
+                    <h3>Books And Music Instruments</h3>
+                    <h6 class="subtitle">Shop Now!</h6>
                 </div>
-                <div class="rightpart">
-                    <a href="#">VIEW ALL</a>
+                <button type="button" class="btn btn-primary">View All</button>
+            </div>
+            <div class="deal-body">
+                <div class="card-group">
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/harmoniums.webp" class="card-img-top" alt="Harmoniums"
+                                title="Harmoniums" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Harmoniums</h5>
+                            <p class="card-text">Upto 60% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Shop Now!</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/flutes.webp" class="card-img-top" alt="Flutes" title="Flutes" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Flutes</h5>
+                            <p class="card-text">Upto 60% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Shop Now!</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/guitars.webp" class="card-img-top" alt="Guitars" title="Guitars" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Acoustic Guitars</h5>
+                            <p class="card-text">Starting &#8377;1799</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Juarez, Revel</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/musical-items.webp" class="card-img-top" alt="Musical Accessories"
+                                title="Musical Accessories" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Musical Accessories</h5>
+                            <p class="card-text">Upto 80% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Shop Now!</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/microphone.webp" class="card-img-top" alt="Microphone Accessories"
+                                title="Microphone Accessories" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Microphone Accessories</h5>
+                            <p class="card-text">Upto 80% off</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">LShop Now!</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/acoustic-guitars.webp" class="card-img-top" alt="Guitars"
+                                title="Guitars" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Acoustic Guitars</h5>
+                            <p class="card-text">Starting &#8377;1999</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Buy Revel</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/acoustic-guitars.webp" class="card-img-top" alt="Guitars"
+                                title="Guitars" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Acoustic Guitars</h5>
+                            <p class="card-text">Starting &#8377;1999</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Buy Revel</small> 
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="itemimg">
+                            <img src="images/acoustic-guitars.webp" class="card-img-top" alt="Guitars"
+                                title="Guitars" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Acoustic Guitars</h5>
+                            <p class="card-text">Starting &#8377;1999</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Buy Revel</small>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="body-part">
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/watch.webp" alt="Watch" title="Whatch">
-                    </div>
-                    <p>Caslo,Fastrack,Sonata,Titan</p>
-                    <p class="offer">Upto 80%+Extra 10% off</p>
-                    <p class="subtitile">Knockout Deals!</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/home-temple.webp" alt="Temple" title="Temple">
-                    </div>
-                    <p>home Temples & More</p>
-                    <p class="offer">Extra 10% off</p>
-                    <p class="subtitile">Space Saving Furniture</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/tablet-cases.webp" alt="Tablet-cases" title="Tablet-cases">
-                    </div>
-                    <p>Premium Tablet cases</p>
-                    <p class="offer">Extra 10% off</p>
-                    <p class="subtitile">For all Top Models</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/best-home-decor.webp" alt="Home-Decor" title="Home-Decor">
-                    </div>
-                    <p>Best Of Home Decor</p>
-                    <p class="offer">From &#8377;79</p>
-                    <p class="subtitile">Lowest Price Ever</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/fashion.webp" alt="Fashion" title="Fashion">
-                    </div>
-                    <p>Metronut,Provogue & </p>
-                    <p class="">From&#8377;249+Extra 10% off</p>
-                    <p class="subtitile">Jackets, Dresses & More</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/lava-mobile.webp" alt="Lava-mobile" title="Lava-mobile">
-                    </div>
-                    <p>LAVA A1500</p>
-                    <p class="offer">Flat&#8377;830 off</p>
-                    <p class="subtitile">Now &#8377;999</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/lava-mobile.webp" alt="Lava-mobile" title="Lava-mobile">
-                    </div>
-                    <p>LAVA A1500</p>
-                    <p class="offer">Flat&#8377;830 off</p>
-                    <p class="subtitile">Now &#8377;999</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/lava-mobile.webp" alt="Lava-mobile" title="Lava-mobile">
-                    </div>
-                    <p>LAVA A1500</p>
-                    <p class="offer">Flat&#8377;830 off</p>
-                    <p class="subtitile">Now &#8377;999</p>
-                </div>
-            </div>
-            </div>
-        </section>
-        <section class="common-deals">
-            <div class="head">
-                <div class="leftpart">
-                    <p>Books and Music Instruments</p>
-                    <p class="subtitile">Shop Now!</p>
-                </div>
-                
-            </div>
-            <div class="body-part">
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/harmoniums.webp" alt="Harmoniums" title="Harmoniums">
-                    </div>
-                    <h5>Harmoniums</h5>
-                    <p class="offer">Upto 60% off</p>
-                    <p class="subtitile">Shop Now!</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/flutes.webp" alt="Flutes" title="Flutes">
-                    </div>
-                    <h5>Flutes</h5>
-                    <p class="offer">Upto 60% off</p>
-                    <p class="subtitile">Shop Now!</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/guitars.webp" alt="Guitars" title="Guitars">
-                    </div>
-                    <h5>Acoustic Guitars</h5>
-                    <p class="offer">Starting &#8377;1799</p>
-                    <p class="subtitile">Juarez, Revel</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/musical-items.webp" alt="Musical Accessories" title="Musical Accessories">
-                    </div>
-                    <h5>Musical Accessories</h5>
-                    <p class="offer">Upto 80% off</p>
-                    <p class="subtitile">Shop Now!</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/microphone.webp" alt="Microphone Accessories" title="Microphone Accessories">
-                    </div>
-                    <h5>Microphone Accessories</h5>
-                    <p class="offer">Upto 80% off</p>
-                    <p class="subtitile">Shop Now!</p>
-                </div>
-                <div class="items">
-                    <div class="item-img">
-                        <img src="images/acoustic-guitars.webp" alt="Guitars" title="Guitars">
-                    </div>
-                    <h5>Acoustic Guitars</h5>
-                    <p class="offer">Starting &#8377;1999</p>
-                    <p class="subtitile">Buy Revel</p>
-                </div>
-                
-            </div>
-            </div>
-        </section>
+        </div>
     </section>
+    <!-- </section> -->
+    <footer class="font-small footer-list page-footer font-small d-flex ">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-3 mx-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item list-title">ABOUT</li>
+                        <li class="list-group-item">Contact Us</li>
+                        <li class="list-group-item">About Us</li>
+                        <li class="list-group-item">Careers</li>
+                        <li class="list-group-item">Flipcart Stories</li>
+                        <li class="list-group-item">Press</li>
+                        <li class="list-group-item">Flipcart Wholesale</li>
+                        <li class="list-group-item">Corporate Information</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mx-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item list-title">HELP</li>
+                        <li class="list-group-item">Payments</li>
+                        <li class="list-group-item">Shopping</li>
+                        <li class="list-group-item">FAQ</li>
+                        <li class="list-group-item">Report</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mx-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item list-title">POLICY</li>
+                        <li class="list-group-item">Return Policy</li>
+                        <li class="list-group-item">Terms of Use</li>
+                        <li class="list-group-item">Security</li>
+                        <li class="list-group-item">Privacy</li>
+                        <li class="list-group-item">Sitemap</li>
+                        <li class="list-group-item">EPR Complience</li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 mx-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item list-title">SOCIAL</li>
+                        <li class="list-group-item">Facebook</li>
+                        <li class="list-group-item">Twitter</li>
+                        <li class="list-group-item">YouTube</li>
+                    </ul>
+                </div>
+                <div class="footer-down d-flex">
+
+                    <a class="Footer-bottom" href="#"><i class="fas fa-shopping-bag" area-hidden="true"
+                            style="color: gold;"></i></i> Sell on Flipcart</a>
+                    <a class="Footer-bottom" href="#"><i class="fa fa-book" area-hidden="true" style="color: gold;"></i>
+                        Advertise</a>
+                    <a class="Footer-bottom" href="#"><i class="fa fa-question-circle" area-hidden="true"
+                            style="color: gold;"></i> Gift Cards</a>
+                    <a class="Footer-bottom" href="#"><i class="fa fa-download" area-hidden="true"
+                            style="color: gold;"></i> Help Center</a>
+                    <a class="Footer-bottom copyright" href="#">© 2007-2022 Flipkart.com</a>
+                </div>
+
+            </div>
+
+    </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

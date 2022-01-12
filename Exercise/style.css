@@ -1,148 +1,174 @@
 *{
     box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
-
-/* Header Section */
-header {
-    display: flex;
-    justify-content: space-evenly;
-    height: 56px;
-    width: 100%;
-    background-color: #2874f0;
+body{
+    background-color: #dbdbdb;
 }
-.left{
-    width: 20%;
-    text-align: right;
-    margin: 2px 0px;
-}
-.center{
-    width: 40%;
-    line-height: 50px;
-    text-align: left;
-    padding-left: 10px;
-}
-/* .fa-search{
-    position:absolute;
-    top: 2.5%;
-    left: 58%;
-    font-size: 18px;
-    color: #2874f0;
-} */
-.searchicon{
-    background-color: #fff;
-
-padding: 0.9rem 1rem;
-
-font-size: 20px;
-
-cursor: pointer;
-
-height: 36px;
-
-color: #0C73EB;
-
-border-radius: 0px 1px 1px 0px;
-}
-.right{
-    width: 40%;
-    font-size: 15px;
-    display: flex;
-    justify-content: flex-start;
-    line-height: 50px;
-}
-.right a{
-    text-decoration: none;
-    color: white;
-    margin: 0px 25px;
-}
-.right .login{
-    background-color: white;
-    color: #2874f0;
-    /* margin: 10px 20px; */
-    padding: 5px 30px;
-    height: 35px;
-    width: 130px;
-    line-height: 23px;
-    margin-top: 8px;
+.main-part{
+    justify-content: center;
     text-align: center;
-    border-radius: 2px;
 }
-.search-Bar{
-    height: 36px;
-    width: 100%;
-    font-size: 14px;
-    padding-left: 10px;
+img:hover{
+    transform: scale(1.1);
+}
+/* Navigation Bar */
+.btnlogin{
+    background-color: white; /* white */
     border: none;
-    text-align: left;
-    justify-content: left;
+    color: rgba(0, 0, 255, 0.753);
+    padding: 6px 32px;
+    text-align: justify;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-img{
-    max-width: 100%;
-    height: auto;
+.nav-item a img{
+    transform: scale(1);
+}
+.logo{
+    align-items: center;
+    width: fit-content;
+    flex-direction: column;
 }
 
+.searchbar{
+    height: 100%;
+    min-width: 300px;
+    margin: 0 auto 0 12px;
+}   
 /* Catagory Section */
 .main-catagory-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    background-color: white;
 }
 .catagory{
     display: flex;
     text-align: center;
-    max-width: 1280px;
+    /* width: auto; */
+    justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-/* Deals Of the Day */
+.catagory-items{
+    padding: 5px 20px;
+}
+.dropdown a{
+    text-decoration: none;
+    color: black;
+}
+/* deals od the day */
 .head{
     display: flex;
     justify-content: space-between;
-    line-height: 32px;
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-    letter-spacing: 0;
+    padding: 20px 15px;
+    border-bottom: 1px solid grey;
+    background-color: white;
 }
-/* .watch{
-    justify-content: flex-start;
-} */
-.leftpart{
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 15px;
+.left{
+    align-items: center;
 }
-.deals{
-    padding-right: 10px;
+.subtitle{
+    font-weight: lighter;
 }
 .fa-clock{
-    /* margin: 8 11px 0px 13px; */
-    height: 50%;
-    padding-top: 3%;
+    padding: 0px 20px;
+    font-size: 25px;
 }
-.body-part{
-    display: flex;
+.btn{
+    max-height: 40px;
 }
-.items{
-    display: flex;
-    flex-direction: column;
+.itemimg{
     align-items: center;
-    justify-content: center;
-     padding: 15px 25px; 
-    max-height: 288.5px;
-    max-width: 195px;
 }
-.item-img{
-    width: 154.5px;
-    height: 154.5px;
+
+/* card */
+.card{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    border-style: none;
+    text-align: center;
+    padding:15px 10px;
+    min-height: 238px;
+    min-width: 165px;
 }
-.item-img img{
-    max-width: 154.5px;
-    max-height: 154.5px;
+.card-img-top{
+
+    height: 130px;
+    width: 140px;
+}
+.itemimg img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;;
+}
+.card-text{
+    color: rgb(21, 92, 21);
+}
+.card-group{
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+#deals{
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+.card-title ,.card-text{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-footer{
+    background-color: white;
+    border: none;
+}
+
+.deal-section{
+    margin: 15px 10px;
+    /* background-color: white; */
+    max-width: 1680px;
+}
+.deal-of-day{
+    margin-top: 15px;
+}
+/* Footer */
+.footer-list{
+    background-color: #172337;
+    padding: 20px 20px;
+}
+.list-group-item{
+    background-color: #172337;
+    color: white;
+    border: none;
+}
+.list-title{
+    color: grey;
+}
+.list-text{
+    color: white;
+    padding-left: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.contact-section{
+    border-left: 2px solid gray;
+    justify-content: space-between;
+    padding-left: 10px;
+} 
+.footer-down{
+    justify-content: center;
+    justify-content: space-between;
+}
+.copyright{
+    text-decoration: none;
+    color: white;
+}
+.Footer-bottom{
+    color: white;
+    text-decoration: none;
 }
